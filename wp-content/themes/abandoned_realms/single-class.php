@@ -35,7 +35,7 @@
       </div>
 
       <div class="row">
-        <?php if (isset(get_field('class_tips'))) : ?>
+        <?php if (get_field('class_tips')) : ?>
           <div class="col-md-12">
             <h2>Tips</h2>
             <?php echo get_field('class_tips'); ?>
