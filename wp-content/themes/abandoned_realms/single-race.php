@@ -64,7 +64,7 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active"><a href="#background" aria-controls="background" role="tab" data-toggle="tab">Background</a></li>
-          <?php if (!empty(get_field('class_tips'))) : ?>
+          <?php if (isset(get_field('class_tips'))) : ?>
             <li role="presentation"><a href="#tips" aria-controls="tips" role="tab" data-toggle="tab">Tips</a></li>
           <?php endif; ?>
           <?php if (!empty(get_field('racial_legacies'))): ?>
@@ -75,10 +75,10 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="background"><?php get_template_part('content-race', 'page'); ?></div>
-          <?php if (!empty(get_field('class_tips'))) : ?>
+          <?php if (isset(get_field('class_tips'))) : ?>
             <div role="tabpanel" class="tab-pane" id="tips"><?php echo get_field('class_tips'); ?></div>
           <?php endif; ?>
-          <?php if (!empty(get_field('racial_legacies'))): ?>
+          <?php if (isset(get_field('racial_legacies'))): ?>
             <div role="tabpanel" class="tab-pane" id="racial-legacies"><?php echo get_field('racial_legacies'); ?></div>
           <?php endif; ?>
         </div>
