@@ -7330,11 +7330,12 @@ fieldset[disabled] a.btn-submit {
   background-color: #222;
   color: white;
   border: none;
+  font-size: 20px;
 }
 .navbar-right #vote-menu .dropdown-menu {
   min-width: 215px;
   background-color: #989898;
-  right: 340px;
+  right: 346px;
 }
 .navbar-right #vote-menu .dropdown-menu:before {
   left: 75%;
