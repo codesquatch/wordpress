@@ -15,6 +15,7 @@ global $current_user; ?><!DOCTYPE html>
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
 	<script src="http://abandonedrealms.com/forum/templates/subSilver/votingScript.js">
 	<?php wp_head(); ?>
 </head>
@@ -35,8 +36,9 @@ global $current_user; ?><!DOCTYPE html>
   <div id="page">
   	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'abandonedrealms' ); ?></a>
   <div id="header">
+    <div>
       <div class="col-md-12 clearfix">
-        <nav class="navbar navbar-inverse sticky" role="navigation">
+        <nav class="navbar navbar-inverse" role="navigation">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-collapse" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
@@ -50,21 +52,11 @@ global $current_user; ?><!DOCTYPE html>
 
             <div class="navbar-nav navbar-right">
               <!-- Menu -->
-              <button id="menu-toggle" class=" btn btn-success"><i class="fa fa-bars"></i><span class="text"> Menu</span></button>
+<!--               <button id="menu-toggle" class=" btn btn-success"><i class="fa fa-bars"></i><span class="text"> Menu</span></button> -->
 
-              <!--  Search Dropdown -->
-              <div class="search dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" aria-label="Search" id="searchDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-search" aria-hidden="true" aria-label="Search Icon"></i>Search
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="searchDropdown" aria-expanded="false">
-                  <?php get_search_form(); ?>
-                </ul>
-              </div>
-              <!-- End Dashboard Menu -->
               <!-- Start Vote dropdown menu -->
               <nav id="vote-menu">
-                <button button type="button" class="btn btn-default dropdown-toggle" aria-label="Search" id="voteDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vote</button>
+                <button button type="button" class="btn btn-default dropdown-toggle" aria-label="Search" id="voteDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bullhorn" aria-hidden="true" aria-label="Bullhorn Icon"></i>Vote</button>
                 <ul class="dropdown-menu" aria-labelledby="voteDropdownMenu">
                   <?php foreach(wp_get_nav_menu_items('vote-menu') as $menu_item): ?>
                   <li>
@@ -120,6 +112,28 @@ global $current_user; ?><!DOCTYPE html>
           </div>
         </nav>
       </div>
+    </div>
+      <div>
+    <div class="col-md-12">
+      <nav class="secondary-navbar navbar-inverse">
+        <?php
+          wp_nav_menu( array(
+            'menu' => 'main-menu',
+            'container' => 'nav',
+          ) );
+        ?>
+        <!--  Search Dropdown -->
+          <div class="search dropdown">
+            <button type="button" class="btn btn-default dropdown-toggle" aria-label="Search" id="searchDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-search" aria-hidden="true" aria-label="Search Icon"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="searchDropdown" aria-expanded="false">
+              <?php get_search_form(); ?>
+            </ul>
+          </div>
+      </nav>
+    </div>
+  </div>
   </div>
 
 	<div id="content" class="site-content">

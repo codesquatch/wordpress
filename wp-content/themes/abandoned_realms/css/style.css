@@ -7247,6 +7247,7 @@ fieldset[disabled] a.btn-submit {
 }
 .navbar {
   height: 105px;
+  margin-bottom: 0;
 }
 .navbar #menu-toggle {
   background-color: #222222;
@@ -7290,39 +7291,6 @@ fieldset[disabled] a.btn-submit {
 .navbar-right .btn {
   padding: 16px 25px;
 }
-.navbar-right .search {
-  display: inline-block;
-}
-.navbar-right .search #searchDropdown {
-  background-color: #222222;
-  color: white;
-  border: none;
-  font-size: 20px;
-}
-.navbar-right .search #searchDropdown .fa-search {
-  padding-right: 5px;
-}
-.navbar-right .search #searchsubmit {
-  background-color: #005977;
-  color: white;
-  border-radius: 5px;
-  padding: 8px 20px;
-  border: none;
-  display: inline-block;
-  margin-left: 10px;
-}
-.navbar-right .search .dropdown-menu {
-  min-width: 300px;
-  background-color: #989898;
-  margin-top: 13px;
-}
-.navbar-right .search .dropdown-menu:before {
-  left: 230px;
-}
-.navbar-right .search .dropdown-menu input[type=text] {
-  border-radius: 5px;
-  height: 36px;
-}
 .navbar-right #vote-menu {
   margin: 10px 10px;
 }
@@ -7331,6 +7299,10 @@ fieldset[disabled] a.btn-submit {
   color: white;
   border: none;
   font-size: 20px;
+}
+.navbar-right #vote-menu #voteDropdownMenu .fa-bullhorn {
+  padding-right: 5px;
+  font-size: 12px;
 }
 .navbar-right #vote-menu .dropdown-menu {
   min-width: 215px;
@@ -7424,7 +7396,59 @@ fieldset[disabled] a.btn-submit {
   padding-top: 10px;
 }
 .home .site-content {
-  margin-top: 30px;
+  margin-top: 120px;
+}
+.secondary-navbar {
+  text-align: right;
+  background-color: black;
+}
+.secondary-navbar nav.menu-main-menu-container {
+  display: inline-block;
+}
+.secondary-navbar .search {
+  display: inline-block;
+}
+.secondary-navbar .search #searchDropdown {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+.secondary-navbar .search #searchDropdown .fa-search {
+  padding-right: 5px;
+  font-size: 16px;
+}
+.secondary-navbar .search #searchsubmit {
+  background-color: #005977;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 20px;
+  border: none;
+  display: inline-block;
+  margin-left: 10px;
+}
+.secondary-navbar .search .dropdown-menu {
+  min-width: 260px;
+  background-color: #989898;
+  margin-top: 13px;
+  left: -208px;
+}
+.secondary-navbar .search .dropdown-menu:before {
+  left: 230px;
+}
+.secondary-navbar .search .dropdown-menu input[type=text] {
+  border-radius: 5px;
+  height: 36px;
+}
+.secondary-navbar ul li {
+  display: inline-block;
+  padding: 12px 5px;
+}
+.secondary-navbar ul li a {
+  padding: 12px;
+}
+.secondary-navbar ul li ul {
+  display: none;
 }
 #scroll-menu {
   position: fixed;

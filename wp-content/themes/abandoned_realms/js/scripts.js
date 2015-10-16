@@ -25,7 +25,7 @@ jQuery(function ($) {
         // Show our "To Top" arrow
         $('#scroll-menu').addClass('scroll-menu-appear');
         if ($('#content #menu-toggle').length == 0) {
-          var clone = $('.navbar #menu-toggle').clone();
+          $('.navbar #menu-toggle').clone();
           $('.navbar #menu-toggle').appendTo('#scroll-menu');
         }
         // Our `Survival becomes second nature text`
@@ -53,7 +53,7 @@ jQuery(function ($) {
       else {
         $('#scroll-menu').removeClass('scroll-menu-appear');
         if ($('.navbar #menu-toggle').length == 0) {
-          $('#scroll-menu #menu-toggle').insertBefore('.dashboard-menu');
+          $('#scroll-menu #menu-toggle').insertBefore('.search');
         }
       }
     });

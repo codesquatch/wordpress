@@ -399,6 +399,7 @@ ul li.leaf {
 
 .navbar {
   height: 105px;
+  margin-bottom: 0;
   #menu-toggle {
     background-color: #222222;
     color: white;
@@ -443,39 +444,6 @@ ul li.leaf {
   .btn {
     padding: 16px 25px;
   }
-  .search {
-    #searchDropdown {
-      background-color: #222222;
-      color: white;
-      border: none;
-      font-size: 20px;
-      .fa-search {
-        padding-right: 5px;
-      }
-    }
-    display: inline-block;
-    #searchsubmit {
-      background-color: @blue;
-      color: white;
-      border-radius: 5px;
-      padding: 8px 20px;
-      border: none;
-      display: inline-block;
-      margin-left: 10px;
-    }
-    .dropdown-menu {
-      min-width: 300px;
-      background-color: @grey;
-      margin-top: 13px;
-      &:before {
-        left: 230px;
-      }
-      input[type=text] {
-        border-radius: 5px;
-        height: 36px;
-      }
-    }
-  }
   #vote-menu {
     margin: 10px 10px;
     #voteDropdownMenu {
@@ -483,6 +451,10 @@ ul li.leaf {
       color: white;
       border: none;
       font-size: 20px;
+      .fa-bullhorn {
+        padding-right: 5px;
+        font-size: 12px;
+      }
     }
     .dropdown-menu {
       min-width: 215px;
@@ -580,8 +552,63 @@ ul li.leaf {
    padding-top: 10px;
  }
  .site-content {
-   margin-top: 30px;
+   margin-top: 120px;
  }
+}
+
+.secondary-navbar {
+  text-align: right;
+  background-color: black;
+  nav.menu-main-menu-container {
+    display: inline-block;
+  }
+  .search {
+    display: inline-block;
+    #searchDropdown {
+      background-color: black;
+      color: white;
+      border: none;
+      font-size: 20px;
+      .fa-search {
+        padding-right: 5px;
+        font-size: 16px;
+      }
+    }
+    #searchsubmit {
+      background-color: @blue;
+      color: white;
+      border-radius: 5px;
+      padding: 8px 20px;
+      border: none;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .dropdown-menu {
+      min-width: 260px;
+      background-color: @grey;
+      margin-top: 13px;
+      left: -208px;
+      &:before {
+        left: 230px;
+      }
+      input[type=text] {
+        border-radius: 5px;
+        height: 36px;
+      }
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+      padding: 12px 5px;
+      a {
+        padding: 12px;
+      }
+      ul {
+        display: none;
+      }
+    }
+  }
 }
 
 #scroll-menu {

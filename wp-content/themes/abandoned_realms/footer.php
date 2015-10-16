@@ -13,7 +13,7 @@
 	</div><!-- .site-content -->
 
   <footer id="footer">
-    <div id="footer-columns" class="col-md-12">
+    <div id="footer-columns" class="row">
       <div class="col-md-4">
         <?php
             if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Column 1') ) : ?>
