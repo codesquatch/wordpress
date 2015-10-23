@@ -56,7 +56,7 @@ global $current_user; ?><!DOCTYPE html>
 
               <!-- Start Vote dropdown menu -->
               <nav id="vote-menu">
-                <button button type="button" class="btn btn-default dropdown-toggle" aria-label="Search" id="voteDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bullhorn" aria-hidden="true" aria-label="Bullhorn Icon"></i>Vote</button>
+                <button button type="button" class="btn btn-default dropdown-toggle" aria-label="Search" id="voteDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vote</button>
                 <ul class="dropdown-menu" aria-labelledby="voteDropdownMenu">
                   <?php foreach(wp_get_nav_menu_items('vote-menu') as $menu_item): ?>
                   <li>
